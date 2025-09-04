@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Documentation Repository</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+        }
+        
+        h3 {
+            color: #34495e;
+        }
+        
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .template {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        ul li:before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        .constraints {
+            background-color: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>QA Documentation Repository</h1>
+        <p>This repository contains QA documentation including feature specifications, test cases, and automation scripts.</p>
+    </div>
+
+    <div class="section">
+        <h2>Prompt: Generate QA Documentation from Discussion Transcript</h2>
+        
+        <h3>Role</h3>
+        <p>You are a Senior QA Engineer. Your task is to transform a raw product discussion into clear, testable, and professional QA documentation.</p>
+        
+        <h3>Objective</h3>
+        <p>Based only on the provided transcript, generate a full QA deliverable package for a new feature. Do not assume requirements not present or logically implied in the source.</p>
+    </div>
+
+    <div class="section">
+        <h3>Inputs</h3>
+        <ul>
+            <li>Feature Name: [Provided separately]</li>
+            <li>Discussion Transcript: [Provided separately]</li>
+        </ul>
+
+        <h3>Templates</h3>
+        <div class="template">
+            <ol>
+                <li>Feature Spec Template (Feature Spec Template 2025.docx)</li>
+                <li>Gherkin Automation Format Example</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Required Deliverables</h2>
+
+        <h3>1. Feature Specification Document</h3>
+        <ul>
+            <li>Follow the structure of the provided template exactly</li>
+            <li>All content must be derived from the transcript</li>
+        </ul>
+
+        <h3>2. Manual Test Case Suite</h3>
+        <p>Format: Table with columns:</p>
+        <ul>
+            <li>Test Case ID</li>
+            <li>Title</li>
+            <li>Prerequisites</li>
+            <li>Steps</li>
+            <li>Expected Result</li>
+        </ul>
+
+        <h4>Test Categories:</h4>
+        <div class="template">
+            [Test categories list with detailed descriptions]
+        </div>
+
+        <h3>3. BDD Automation Feature File</h3>
+        <p>Format: Gherkin (.feature)</p>
+        
+        <div class="template">
+            <h4>Requirements:</h4>
+            <ul>
+                <li>@tags for logical scenario grouping</li>
+                <li>Scenario Outline + Examples for data-driven tests</li>
+                <li>Shared Background steps</li>
+                <li>Clear readability for all stakeholders</li>
+                <li>Conformance to Gherkin template</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="constraints">
+        <h3>Constraints</h3>
+        <ol>
+            <li>Use only the transcript as your source</li>
+            <li>Do not invent requirements—only derive or logically clarify</li>
+            <li>All output must be suitable for direct use by QA, dev, and product teams</li>
+        </ol>
+    </div>
+</body>
+</html>
